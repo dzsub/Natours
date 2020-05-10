@@ -25,8 +25,8 @@
         &:visited {
             color:$color-grey-dark;
             position: absolute;
-            top: 2.5rem;
-            right: 2.5rem;
+            top: 2rem;
+            right: 2rem;
             font-size: 3rem;
             text-decoration: none;
             display: inline-block;
@@ -55,6 +55,16 @@
     &__left {
         width: 33.333333%;
         display: table-cell;
+        vertical-align: middle;
+
+        @include respond(tab-land) {
+            vertical-align: middle;
+        }
+
+        @include respond(tab-port) {
+            width: 0;
+            display: none;
+        }
     }
 
     &__right {
